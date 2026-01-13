@@ -3,6 +3,8 @@ import { NextResponse } from 'next/server';
 import { PrismaClient } from '@prisma/client';
 import bcrypt from 'bcryptjs';
 
+// Mark route as dynamic for Vercel deployment
+export const dynamic = 'force-dynamic';
 const prisma = new PrismaClient();
 
 // GET: List all users

@@ -5,6 +5,8 @@ import { updateInventory } from '@/lib/inventory';
 import { cookies } from 'next/headers';
 import jwt from 'jsonwebtoken';
 
+// Mark route as dynamic for Vercel deployment
+export const dynamic = 'force-dynamic';
 const prisma = new PrismaClient();
 const JWT_SECRET = process.env.JWT_SECRET || 'super-secret-key-change-this';
 
