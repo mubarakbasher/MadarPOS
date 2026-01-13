@@ -47,19 +47,25 @@ async function getSalesData(params: PageProps['searchParams']) {
 
     // Serialize data
     const serializedSales = sales.map(sale => ({
-        ...sale,
+        sale_id: sale.sale_id,
+        invoice_number: sale.invoice_number,
+        sale_date: sale.sale_date.toISOString(),
         total_amount: sale.total_amount.toString(),
-        discount: sale.discount.toString(),
-        tax: sale.tax.toString(),
+        payment_method: sale.payment_method || 'Cash',
+        user: sale.user,
+        customer: sale.customer,
         sale_items: sale.sale_items.map(item => ({
-            ...item,
+            sale_item_id: item.sale_item_id,
+            product: { name: item.product.name },
+            quantity: item.quantity,
             unit_price: item.unit_price.toString(),
+            discount: item.discount.toString(),
             subtotal: item.subtotal.toString()
         }))
     }));
 
     return {
-        sales: serializedSales,
+        sales: serializedSales as any,
         settings: settings || { system_name: 'MADAR POS', currency: 'USD' },
         cashierFilter: cashier,
         stats: {
