@@ -1,0 +1,83 @@
+{
+    "name": "MADAR POS",
+    "short_name": "MADAR",
+    "description": "Modern Point of Sale System with Offline Capability",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4F46E5",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": [
+        "business",
+        "finance",
+        "productivity"
+    ],
+    "scope": "/",
+    "prefer_related_applications": false,
+    "shortcuts": [
+        {
+            "name": "New Sale",
+            "short_name": "POS",
+            "description": "Start a new sale transaction",
+            "url": "/pos",
+            "icons": [
+                {
+                    "src": "/icon-192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "Inventory",
+            "short_name": "Inventory",
+            "description": "View inventory",
+            "url": "/inventory",
+            "icons": [
+                {
+                    "src": "/icon-192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "Reports",
+            "short_name": "Reports",
+            "description": "View sales reports",
+            "url": "/reports",
+            "icons": [
+                {
+                    "src": "/icon-192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/screenshot-wide.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide"
+        },
+        {
+            "src": "/screenshot-narrow.png",
+            "sizes": "750x1334",
+            "type": "image/png",
+            "form_factor": "narrow"
+        }
+    ]
+}
