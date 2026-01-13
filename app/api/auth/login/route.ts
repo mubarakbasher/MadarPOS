@@ -8,6 +8,9 @@ import { cookies } from 'next/headers';
 const prisma = new PrismaClient();
 const JWT_SECRET = process.env.JWT_SECRET || 'super-secret-key-change-this';
 
+// Mark this route as dynamic since it uses cookies
+export const dynamic = 'force-dynamic';
+
 export async function POST(req: Request) {
     try {
         const body = await req.json();
