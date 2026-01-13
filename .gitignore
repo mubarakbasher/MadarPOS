@@ -1,5 +1,32 @@
 node_modules
 # Keep environment variables out of version control
 .env
+.env.local
+.env.production
 
+# Next.js build output
+.next
+out
+
+# Development database
+dev.db
+*.db
+*.db-journal
+
+# Generated Prisma
 /lib/generated/prisma
+
+# TypeScript build info
+*.tsbuildinfo
+next-env.d.ts
+
+# Vercel
+.vercel
+
+# PWA
+**/public/sw.js
+**/public/workbox-*.js
+**/public/worker-*.js
+**/public/sw.js.map
+**/public/workbox-*.js.map
+**/public/worker-*.js.map
