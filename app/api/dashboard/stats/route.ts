@@ -47,7 +47,7 @@ export async function GET() {
         // Assuming we look at branch 1 for now or all stock.
         // Prisma `where` on relation:
         const lowStockResult = await prisma.$queryRaw<[{ count: bigint }]>`
-            SELECT COUNT(*) as count FROM Inventory WHERE quantity <= reorder_level
+            SELECT COUNT(*) as count FROM inventory WHERE quantity <= reorder_level
         `;
         const lowStockCount = Number(lowStockResult[0]?.count || 0);
 
